@@ -2,16 +2,47 @@
   "name": "nuxt-app",
   "type": "module",
   "private": true,
+  "engines": {
+    "node": "<=22.17.1",
+    "pnpm": ">=9.0.0"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "biome": "biome check",
+    "biome:fix": "biome check --write",
+    "lint": "stylelint \"app/**/*.css\"",
+    "lint:fix": "stylelint \"app/**/*.css\" --fix"
   },
   "dependencies": {
     "nuxt": "^4.0.3",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1"
-  }
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.0",
+    "@nuxt/kit": "^4.0.3",
+    "@stylistic/stylelint-plugin": "^4.0.0",
+    "autoprefixer": "^10.4.21",
+    "npm-check-updates": "^18.0.2",
+    "nuxt-font-loader": "^2.3.5",
+    "nuxt-svgo": "^4.2.6",
+    "nuxt-swiper": "^2.0.1",
+    "postcss": "^8.5.6",
+    "postcss-nested": "^7.0.2",
+    "postcss-pxtorem": "^6.1.0",
+    "postcss-sort-media-queries": "^5.2.0",
+    "stylelint": "^16.23.1",
+    "stylelint-config-standard": "^39.0.0",
+    "stylelint-order": "^7.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "ie 8",
+    "ie 7",
+    "last 15 versions"
+  ]
 }
