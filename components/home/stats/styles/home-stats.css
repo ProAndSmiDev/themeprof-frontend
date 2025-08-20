@@ -1,0 +1,15 @@
+.home-stats {
+  display: flex;
+  flex-direction: column;
+  row-gap: calc(var(--gutter) * 3.5);
+
+  @media(width <= 1439px) {
+    row-gap: calc(var(--gutter) * 3);
+  }
+  @media(width <= 1023px) {
+    row-gap: calc(var(--gutter) * 2.5);
+  }
+  @media(width <= 767px) {
+    row-gap: calc(var(--gutter) * 2);
+  }
+}
