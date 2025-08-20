@@ -1,6 +1,4 @@
-<script lang="ts" setup>
-import Hello from "~~/components/Hello.vue";
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <div class="app">
@@ -8,4 +6,4 @@ import Hello from "~~/components/Hello.vue";
   </div>
 </template>
 
-<style scoped src="css/main.css"></style>
+<style src="css/main.css"></style>

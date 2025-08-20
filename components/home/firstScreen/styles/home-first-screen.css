@@ -1,0 +1,87 @@
+.home-first-screen {
+  background-image: url("/img/first-screen/puzzle/decor.webp");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 896px 620px;
+
+  @media(width <= 1439px) {
+    background-size: 613px 420px;
+  }
+  @media(width <= 1023px) {
+    background-image: url("/img/first-screen/puzzle/decor-tablet.webp");
+    background-size: 357px 340px;
+  }
+  @media(width <= 767px) {
+    background-image: url("/img/first-screen/puzzle/decor-mobile.webp");
+    background-position: bottom center;
+    background-size: 100% 360px;
+  }
+
+  &__title {
+    width: 100%;
+    max-width: 654px;
+
+    display: inline-block;
+
+    padding: calc(var(--gutter) * 8) calc(var(--gutter) * 4) calc(var(--gutter) * 8) calc(var(--gutter) * 7);
+    background-image: url("/img/first-screen/puzzle/title-bg.webp");
+    background-size: 100% 100%;
+
+    @media(width <= 1023px) {
+      padding-top: calc(var(--gutter) * 3.5);
+      padding-bottom: calc(var(--gutter) * 4.5);
+      background-image: url("/img/first-screen/puzzle/title-bg-tablet.webp");
+      background-size: 417px 180px;
+    }
+    @media(width <= 767px) {
+      max-width: 100%;
+      height: 282px;
+      background-image: url("/img/first-screen/puzzle/title-bg-mobile.webp");
+      background-size: 100% 282px;
+    }
+
+    @media(width <= 1439px) {
+      max-width: 447px;
+
+      padding-top: calc(var(--gutter) * 5.5);
+      padding-bottom: calc(var(--gutter) * 5.5);
+      padding-left: calc(var(--gutter) * 4);
+      background-repeat: no-repeat;
+      background-size: 447px 230px;
+    }
+  }
+
+  &__description {
+    width: 100%;
+    max-width: 230px;
+    margin-top: calc(var(--gutter) * 7);
+    margin-bottom: calc(var(--gutter) * 7);
+    margin-left: calc(var(--gutter) * 13);
+
+    display: flex;
+    align-items: flex-start;
+    column-gap: calc(var(--gutter) * 2);
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    color: hsl(var(--theme));
+    font-size: 30px;
+
+    @media(width <= 1439px) {
+      font-size: 20px;
+    }
+  }
+
+  &__text {
+    color: hsl(var(--secondary));
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+
+    @media(width <= 1439px) {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+}
