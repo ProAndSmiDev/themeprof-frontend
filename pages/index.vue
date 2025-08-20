@@ -3,6 +3,7 @@
 <template>
   <div class="home">
     <HomeFirstScreen class="home__first-screen" />
+    <HomeReleases class="home__releases" />
   </div>
 </template>
 

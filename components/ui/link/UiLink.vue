@@ -27,7 +27,7 @@ const UiLinkClasses = computed(() => ({
   >
     <span class="ui-link__wrapper">
       <span class="ui-link__text u-truncate">
-        {{ title }}
+        <slot></slot>
       </span>
 
       <span v-if="$slots.icon" class="ui-link__icon">

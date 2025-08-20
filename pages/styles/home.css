@@ -4,6 +4,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  row-gap: calc(var(--gutter) * 7.5);
+
+  @media(width <= 1439px) {
+    row-gap: calc(var(--gutter) * 5);
+  }
+  @media(width <= 1023px) {
+    row-gap: calc(var(--gutter) * 4);
+  }
 
   &__first-screen {
     @media(width <= 1439px) {
@@ -29,6 +37,15 @@
     }
     @media(width <= 767px) {
       height: 600px;
+    }
+  }
+
+  &__releases {
+    width: 100%;
+    max-width: 1440px;
+
+    @media(width <= 1439px) {
+      width: 100vw;
     }
   }
 }

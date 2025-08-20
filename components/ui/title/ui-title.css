@@ -1,0 +1,14 @@
+.ui-title {
+  text-align: center;
+  font-size: 40px;
+  line-height: 50px;
+
+  @media(width <= 1439px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  @media(width <= 767px) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}

@@ -20,6 +20,7 @@
       <template #icon>
         <IconArrowUpRight />
       </template>
+      Заказать продукт
     </UiLink>
   </UiFirstScreenPuzzle>
 </template>
