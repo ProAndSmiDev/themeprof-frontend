@@ -1,0 +1,9 @@
+.ui-link--font-s15 {
+  --ui-link-font-size: 15px;
+  --ui-link-line-height: 21px;
+
+  @media(width <= 767px) {
+    --ui-link-font-size: 14px;
+    --ui-link-line-height: 19px;
+  }
+}

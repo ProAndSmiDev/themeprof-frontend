@@ -1,0 +1,6 @@
+.ui-link--theme-default {
+  --ui-link-text-color: var(--light);
+  --ui-link-gradient-color: var(--light);
+  --ui-link-background-color: var(--theme);
+  --ui-link-background-image: url("/img/button/default.jpg");
+}

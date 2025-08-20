@@ -84,4 +84,27 @@
       line-height: 19px;
     }
   }
+
+  &__link {
+    width: 100%;
+    max-width: 280px;
+    margin-top: auto;
+    margin-left: calc(var(--gutter) * 11);
+
+    display: inline-block;
+
+    @media(width <= 1439px) {
+      margin-left: calc(var(--gutter) * 7);
+    }
+
+    @media(width <= 767px) {
+      position: relative;
+      top: -128px;
+      right: 1px;
+      max-width: clamp(156px, 47%, 218px);
+      margin-top: 0;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
 }

@@ -1,0 +1,10 @@
+.ui-link--size-s20 {
+  --ui-link-paddings: calc(var(--gutter) * 2);
+
+  @media(width <= 1439px) {
+    --ui-link-paddings: calc(var(--gutter) * 1.5);
+  }
+  @media(width <= 1023px) {
+    --ui-link-paddings: calc(var(--gutter) * 2);
+  }
+}
