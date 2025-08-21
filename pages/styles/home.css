@@ -14,6 +14,7 @@
   }
 
   &__stats,
+  &__steps,
   &__first-screen {
     @media(width <= 1439px) {
       margin-right: calc(var(--gutter) * 2);
