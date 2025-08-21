@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import HomeStatsCard from "components/home/stats/HomeStatsCard.vue";
-
 interface Props {
   stats: Stats[]
 }

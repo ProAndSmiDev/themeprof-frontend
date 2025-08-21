@@ -10,12 +10,12 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   theme: 'default',
   size: 's20',
-  fontSize: 's15',
+  fontSize: 's15'
 })
-const UiLinkClasses = computed(() => ({
+const uiLinkClasses = computed(() => ({
   [`ui-link--theme-${props.theme}`]: Boolean(props.theme),
   [`ui-link--size-${props.size}`]: Boolean(props.size),
-  [`ui-link--font-${props.fontSize}`]: Boolean(props.fontSize),
+  [`ui-link--font-${props.fontSize}`]: Boolean(props.fontSize)
 }))
 </script>
 
@@ -23,7 +23,7 @@ const UiLinkClasses = computed(() => ({
   <NuxtLink
       :href
       :title
-      :class="['ui-link', UiLinkClasses]"
+      :class="['ui-link', uiLinkClasses]"
   >
     <span class="ui-link__wrapper">
       <span class="ui-link__text u-truncate">

@@ -1,0 +1,52 @@
+.ui-menu {
+  gap: calc(var(--gutter) * 6);
+
+  @media(width <= 1439px) {
+    gap: calc(var(--gutter) * 3);
+  }
+  @media(width <= 1023px) {
+    gap: calc(var(--gutter) * 2);
+  }
+
+  &--footer {
+    @media(width <= 1023px) {
+      gap: calc(var(--gutter) * 7);
+    }
+    @media(width <= 767px) {
+      flex-direction: column;
+      gap: calc(var(--gutter) * 3);
+    }
+
+    .ui-menu__link {
+      @media(width <= 1023px) {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    transition: color 0.3s ease-in-out;
+
+    @media(width <= 1439px) {
+      font-size: 16px;
+      line-height: 19px;
+    }
+    @media(width <= 1023px) {
+      font-size: 13px;
+      line-height: 16px;
+    }
+
+    &--active,
+    &:hover {
+      color: hsl(var(--theme));
+    }
+
+    &--uppercase {
+      text-transform: uppercase;
+    }
+  }
+}
