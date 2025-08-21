@@ -1,8 +1,8 @@
 <script setup lang="ts">
 interface Props {
   menu: Menu[]
-  place: 'header' | 'footer'
-  uppercase: boolean
+  place?: 'header' | 'footer'
+  uppercase?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {

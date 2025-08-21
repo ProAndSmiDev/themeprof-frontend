@@ -57,7 +57,7 @@ const menu: Menu[] = [
   {
     caption: 'Продукты',
     url: {
-      path: '',
+      path: '/products',
       title: 'Перейти на страницу «Продукты»'
     }
   }
