@@ -1,0 +1,125 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: hsla(var(--sep));
+  background-image: url("/img/footer/bg.jpg");
+  background-size: cover;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    padding: calc(var(--gutter) * 5) calc(var(--gutter) * 7) 0;
+
+    @media(width <= 1439px) {
+      padding-top: calc(var(--gutter) * 4.5);
+      padding-right: calc(var(--gutter) * 2);
+      padding-left: calc(var(--gutter) * 2);
+    }
+  }
+
+  &__row {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: calc(var(--gutter) * 2);
+
+    @media(width <= 767px) {
+      flex-direction: column;
+      gap: calc(var(--gutter) * 3.5);
+    }
+
+    &:not(:last-child) {
+      padding-bottom: calc(var(--gutter) * 4.5);
+
+      @media(width <= 1439px) {
+        padding-bottom: calc(var(--gutter) * 2.5);
+      }
+      @media(width <= 767px) {
+        padding-bottom: calc(var(--gutter) * 3.5);
+      }
+    }
+
+    &--wrap {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__link {
+    width: auto;
+    line-height: 0;
+    transition: color 0.3s ease-in-out;
+
+    &--active,
+    &:hover {
+      color: hsl(var(--theme));
+    }
+
+    &--active {
+      pointer-events: none;
+    }
+  }
+
+  &__logo {
+    width: 126px;
+    height: 126px;
+
+    border-radius: 50%;
+    background-color: hsl(var(--light));
+
+    @media(width <= 1439px) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__menu {
+    @media(width <= 1023px) {
+      order: -1;
+      width: 100%;
+
+      justify-content: center;
+    }
+
+    @media(width <= 767px) {
+      order: unset;
+    }
+  }
+
+  &__copyright {
+    width: 100%;
+    max-width: 604px;
+    height: 79px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: calc(var(--gutter) * 0.5);
+
+    align-items: center;
+    justify-content: center;
+    background-image: url("/img/footer/copyright.webp");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
+
+    @media(width <= 1023px) {
+      max-width: 408px;
+      background-image: url("/img/footer/copyright-mobile.webp");
+      font-size: 12px;
+      line-height: 14px;
+    }
+    @media(width <= 767px) {
+      order: 2;
+    }
+  }
+
+  &__payments {
+    @media(width <= 767px) {
+      order: 1;
+    }
+  }
+}

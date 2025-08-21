@@ -1,0 +1,23 @@
+.footer-menu {
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: calc(var(--gutter) * 2);
+
+  @media(width <= 767px) {
+    align-items: center;
+  }
+
+  &__link {
+    transition: color 0.3s ease-in-out;
+
+    @media(width <= 1439px) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &--active,
+    &:hover {
+      color: hsl(var(--theme));
+    }
+  }
+}

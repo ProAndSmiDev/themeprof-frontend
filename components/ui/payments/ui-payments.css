@@ -1,0 +1,24 @@
+.ui-payments {
+  justify-content: center;
+  column-gap: calc(var(--gutter) * 1.5);
+
+  &__item {
+    line-height: 0;
+
+    &--mir {
+      font-size: 45px;
+    }
+
+    &--visa {
+      font-size: 45px;
+    }
+
+    &--mastercard {
+      font-size: 33px;
+    }
+
+    &--sbp {
+      font-size: 42px;
+    }
+  }
+}

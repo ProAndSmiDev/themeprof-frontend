@@ -1,0 +1,7 @@
+.ui-socials {
+  column-gap: var(--gutter);
+
+  &__item {
+    font-size: 30px;
+  }
+}

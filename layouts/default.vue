@@ -4,10 +4,12 @@
 
 <template>
   <div class="default">
-    <div class="page u-flex u-flex-col">
-      <main class="page__main u-flex u-flex-col u-align-center">
+    <div class="page">
+      <main class="page__main">
         <NuxtPage />
       </main>
+
+      <Footer class="page__footer" />
     </div>
 
   </div>

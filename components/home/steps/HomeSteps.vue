@@ -3,31 +3,31 @@ const steps: Steps[] = [
   {
     title: {
       colored: 'Выберите ',
-      normal: 'подходящий продукт и&nbsp;тариф',
+      normal: 'подходящий продукт и&nbsp;тариф'
     },
-    icon: 'Choice',
+    icon: 'Choice'
   },
   {
     title: {
       colored: 'Добавьте ',
-      normal: 'выбранный продукт в&nbsp;корзину',
+      normal: 'выбранный продукт в&nbsp;корзину'
     },
-    icon: 'Cart',
+    icon: 'Cart'
   },
   {
     title: {
       colored: 'Оформите ',
-      normal: 'свой заказ',
+      normal: 'свой заказ'
     },
-    icon: 'Order',
+    icon: 'Order'
   },
   {
     title: {
       colored: 'Получите ',
-      normal: 'продукт',
+      normal: 'продукт'
     },
-    icon: 'Email',
-  },
+    icon: 'Email'
+  }
 ]
 </script>
 
