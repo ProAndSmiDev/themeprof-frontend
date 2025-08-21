@@ -2,10 +2,11 @@
 
 <template>
   <div class="home">
-    Это главная страница сайта
+    <HomeFirstScreen class="home__first-screen" />
+    <HomeSteps class="home__steps" />
+    <HomeReleases class="home__releases" />
+    <HomeStats class="home__stats" />
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped src="./styles/home.css"></style>

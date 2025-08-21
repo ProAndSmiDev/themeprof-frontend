@@ -1,0 +1,6 @@
+.ui-link--theme-light {
+  --ui-link-text-color: var(--secondary);
+  --ui-link-gradient-color: var(--theme);
+  --ui-link-background-color: var(--light);
+  --ui-link-background-image: url("/img/button/light.jpg");
+}

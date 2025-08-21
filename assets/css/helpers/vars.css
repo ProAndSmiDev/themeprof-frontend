@@ -1,0 +1,28 @@
+:root {
+  --font: GothamPro, Arial;
+  --primary: 15, 5%, 16%;
+  --secondary: 26, 4%, 35%;
+  --theme: 9, 16%, 60%;
+  --sep-light: 24, 16%, 92%;
+  --sep: 24, 16%, 87%;
+  --light: 26, 78%, 98%;
+  --focus: 217, 100%, 65%;
+  --gutter: 10px;
+  --border-radius: 4px;
+  font-family: var(--font), sans-serif;
+  font-size: calc(16 / 1920 * 100vw);
+
+  @media(width <= 1439px) {
+    font-size: calc(16 / 1024 * 100vw);
+  }
+  @media (width <= 1023px) {
+    --gutter: 8px;
+    font-size: calc(16 / 768 * 100vw);
+  }
+  @media(width <= 767px) {
+    font-size: calc(12 / 375 * 100vw);
+  }
+  @media(width <= 479px) {
+    font-size: calc(16 / 375 * 100vw);
+  }
+}

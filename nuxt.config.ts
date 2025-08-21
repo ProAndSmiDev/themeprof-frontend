@@ -8,36 +8,8 @@ export default async () => defineNuxtConfig({
   },
   alias: {
     'pages': await resolvePath('./pages/'),
-    'css': await resolvePath('./assets/styles/'),
+    'css': await resolvePath('./assets/css/'),
     'components': await resolvePath('./components/')
-  },
-  fontLoader: {
-    local: [
-      {
-        display: 'swap',
-        family: 'GothamPro',
-        src: '/fonts/GothamProRegular.woff2',
-        weight: '400'
-      },
-      {
-        display: 'swap',
-        family: 'GothamPro',
-        src: '/fonts/GothamProMedium.woff2',
-        weight: '500'
-      },
-      {
-        display: 'swap',
-        family: 'GothamPro',
-        src: '/fonts/GothamProBold.woff2',
-        weight: '700'
-      },
-      {
-        display: 'swap',
-        family: 'GothamPro',
-        src: '/fonts/GothamProBlack.woff2',
-        weight: '900'
-      },
-    ],
   },
   postcss: {
     plugins: {

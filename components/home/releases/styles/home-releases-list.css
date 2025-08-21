@@ -1,0 +1,30 @@
+.home-releases-list {
+  align-items: stretch;
+  column-gap: calc(var(--gutter) * 2.5);
+
+  @media(width <= 1439px) {
+    column-gap: calc(var(--gutter) * 2);
+    padding-bottom: calc(var(--gutter) * 1.5);
+    overflow-x: scroll;
+  }
+  @media(width <= 1023px) {
+    column-gap: calc(var(--gutter) * 3);
+  }
+  @media(width <= 767px) {
+    column-gap: calc(var(--gutter) * 2.5);
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 306px;
+    flex-shrink: 0;
+
+    @media(width <= 767px) {
+      max-width: 240px;
+    }
+  }
+
+  &__card {
+    height: 100%;
+  }
+}

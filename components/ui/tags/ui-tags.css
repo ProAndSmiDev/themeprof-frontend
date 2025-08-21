@@ -1,0 +1,13 @@
+.ui-tags {
+  gap: calc(var(--gutter) * 0.5) var(--gutter);
+
+  flex-wrap: wrap;
+
+  &__item {
+    color: hsl(var(--secondary));
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 12px;
+  }
+}

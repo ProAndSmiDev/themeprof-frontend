@@ -1,0 +1,5 @@
+/* Глобальные */
+@import "./helpers/vars.css";
+@import "./helpers/fonts.css";
+@import "./helpers/clear.css";
+@import "./helpers/utils.css";
