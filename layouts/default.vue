@@ -5,6 +5,8 @@
 <template>
   <div class="default">
     <div class="page">
+      <Header class="page__header" />
+
       <main class="page__main">
         <NuxtPage />
       </main>
