@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { tariffsName } from 'constants/tariffs'
+import type { Products } from 'interfaces/Products'
+
 const products: Products[] = [
   {
     id: 321056,
@@ -16,21 +19,21 @@ const products: Products[] = [
     },
     tariffs: [
       {
-        name: 'Быстрый старт',
+        name: tariffsName.DEFAULT,
         price: 1200,
         options: ['Опция 1', 'Опция 2', 'Опция 3'],
         based: ['ощущениях', 'ароматах', 'восприятии'],
         icon: 'rocket'
       },
       {
-        name: 'Оптимальный',
+        name: tariffsName.STANDARD,
         price: 2600,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6'],
         based: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
         icon: 'fire'
       },
       {
-        name: 'Под ключ',
+        name: tariffsName.ADVANCED,
         price: 4500,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6', 'Опция 7', 'Опция 8', 'Опция 9'],
         based: [
@@ -67,21 +70,21 @@ const products: Products[] = [
     },
     tariffs: [
       {
-        name: 'Быстрый старт',
+        name: tariffsName.DEFAULT,
         price: 2400,
         options: ['Опция 1', 'Опция 2', 'Опция 3'],
         based: ['ощущениях', 'ароматах', 'восприятии'],
         icon: 'rocket'
       },
       {
-        name: 'Оптимальный',
+        name: tariffsName.STANDARD,
         price: 4800,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6'],
         based: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
         icon: 'fire'
       },
       {
-        name: 'Под ключ',
+        name: tariffsName.ADVANCED,
         price: 7200,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6', 'Опция 7', 'Опция 8', 'Опция 9'],
         based: [
@@ -118,21 +121,21 @@ const products: Products[] = [
     },
     tariffs: [
       {
-        name: 'Быстрый старт',
+        name: tariffsName.DEFAULT,
         price: 1400,
         options: ['Опция 1', 'Опция 2', 'Опция 3'],
         based: ['ощущениях', 'ароматах', 'восприятии'],
         icon: 'rocket'
       },
       {
-        name: 'Оптимальный',
+        name: tariffsName.STANDARD,
         price: 1800,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6'],
         based: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
         icon: 'fire'
       },
       {
-        name: 'Под ключ',
+        name: tariffsName.ADVANCED,
         price: 2500,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6', 'Опция 7', 'Опция 8', 'Опция 9'],
         based: [
@@ -169,21 +172,21 @@ const products: Products[] = [
     },
     tariffs: [
       {
-        name: 'Быстрый старт',
+        name: tariffsName.DEFAULT,
         price: 1750,
         options: ['Опция 1', 'Опция 2', 'Опция 3'],
         based: ['ощущениях', 'ароматах', 'восприятии'],
         icon: 'rocket'
       },
       {
-        name: 'Оптимальный',
+        name: tariffsName.STANDARD,
         price: 2200,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6'],
         based: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
         icon: 'fire'
       },
       {
-        name: 'Под ключ',
+        name: tariffsName.ADVANCED,
         price: 3450,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6', 'Опция 7', 'Опция 8', 'Опция 9'],
         based: [

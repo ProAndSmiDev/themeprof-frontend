@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type {Products} from 'interfaces/Products'
+
 interface Props {
   products: Products[]
 }

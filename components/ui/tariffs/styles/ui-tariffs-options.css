@@ -1,0 +1,43 @@
+.ui-tariffs-options {
+  flex-direction: column;
+  row-gap: calc(var(--gutter) * 2);
+
+  &__item {
+    width: 100%;
+
+    display: flex;
+    align-items: self-start;
+    justify-content: flex-start;
+    column-gap: calc(var(--gutter) * 2);
+  }
+
+  &__point {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    margin-top: 3px;
+
+    border-radius: 50%;
+    background-color: hsl(var(--light));
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 6px;
+      height: 6px;
+
+      content: "";
+
+      border-radius: 50%;
+      background-color: hsl(var(--theme));
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__caption {
+    color: hsl(var(--primary));
+    font-weight: 500;
+  }
+}
