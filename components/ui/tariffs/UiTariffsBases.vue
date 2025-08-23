@@ -1,14 +1,16 @@
 <script setup lang="ts">
+import { type ThemeType, themeType } from 'constants/themeType'
+
 interface Props {
   bases: string[]
-  theme?: string
+  theme?: ThemeType
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  theme: 'default'
+  theme: themeType.DEFAULT
 })
 const uiTariffsBasesClasses = computed(() => ({
-  [`ui-tariffs-bases--theme-${props.theme}`]: Boolean(props.theme),
+  [`ui-tariffs-bases--theme-${props.theme}`]: Boolean(props.theme)
 }))
 </script>
 

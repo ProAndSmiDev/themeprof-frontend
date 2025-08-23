@@ -3,3 +3,5 @@ export const tariffsName= Object.freeze({
   STANDARD: 'Оптимальный',
   ADVANCED: 'Под ключ',
 } as const)
+
+export type TariffsName = typeof tariffsName[keyof typeof tariffsName];

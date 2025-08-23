@@ -1,16 +1,19 @@
 <script setup lang="ts">
+import { type SizeType, sizeType } from 'constants/sizeType'
+import { type ThemeType, themeType } from 'constants/themeType'
+
 interface Props {
-  theme?: string
+  theme?: ThemeType
   title: string
   href: string
-  size?: string
-  fontSize?: string
+  size?: SizeType
+  fontSize?: SizeType
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  theme: 'default',
-  size: 's20',
-  fontSize: 's15'
+  theme: themeType.DEFAULT,
+  size: sizeType.S20,
+  fontSize: sizeType.S15
 })
 const uiLinkClasses = computed(() => ({
   [`ui-link--theme-${props.theme}`]: Boolean(props.theme),

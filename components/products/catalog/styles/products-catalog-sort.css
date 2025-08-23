@@ -1,0 +1,37 @@
+.products-catalog-sort {
+  column-gap: calc(var(--gutter) * 1.5);
+
+  &__toggler {
+    display: flex;
+    align-items: center;
+    column-gap: calc(var(--gutter) * 0.5);
+    padding: calc(var(--gutter) * 0.5) var(--gutter);
+    border-radius: calc(var(--border-radius) * 4);
+    background-color: hsl(var(--light));
+    color: hsl(var(--secondary));
+    text-transform: uppercase;
+    font-weight: 900;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &--active,
+    &:hover {
+      background-color: hsl(var(--theme));
+      color: hsl(var(--light));
+    }
+
+    &--active {
+      pointer-events: none;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__caption {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1px;
+  }
+}

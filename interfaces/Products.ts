@@ -1,16 +1,6 @@
-import type { tariffsName } from 'constants/tariffs'
+import type {Tariffs} from "interfaces/Tariffs";
 
-type TariffsName = typeof tariffsName[keyof typeof tariffsName];
-
-interface ProductsTariffs {
-  name: TariffsName
-  price: number
-  options: string[]
-  based: string[]
-  icon: string
-}
-
-interface ProductsFeedback {
+export interface ProductsFeedback {
   rate: string
   comments: number
 }
@@ -27,5 +17,5 @@ export interface Products {
   photo: ProductsPhoto
   tags: string[]
   feedback: ProductsFeedback
-  tariffs: ProductsTariffs[]
+  tariffs: Tariffs[]
 }

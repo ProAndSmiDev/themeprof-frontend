@@ -1,11 +1,9 @@
-<script setup lang="ts">
-
-import ProductsTariffs from "components/products/tariffs/ProductsTariffs.vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="products">
     <ProductsFirstScreen class="products__first-screen" />
+    <ProductsCatalog class="products__catalog" />
     <ProductsTariffs class="products__tariffs" />
   </div>
 </template>

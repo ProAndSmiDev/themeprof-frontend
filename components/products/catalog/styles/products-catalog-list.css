@@ -1,0 +1,18 @@
+.products-catalog-list {
+  flex-wrap: wrap;
+  align-items: normal;
+  gap: calc(var(--gutter) * 2.5);
+
+  &__item {
+    width: 100%;
+
+
+    &--catalog {
+      max-width: calc((100% - (var(--gutter) * 2.5 * 2)) / 3);
+    }
+
+    &--recommended {
+      max-width: calc((100% - (var(--gutter) * 2.5 * 3)) / 4);
+    }
+  }
+}
