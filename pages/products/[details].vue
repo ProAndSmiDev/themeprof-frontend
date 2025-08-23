@@ -23,14 +23,14 @@ const products: Products[] = [
         price: 1200,
         options: ['Опция 1', 'Опция 2', 'Опция 3'],
         bases: ['ощущениях', 'ароматах', 'восприятии'],
-        icon: 'rocket'
+        icon: 'Rocket'
       },
       {
         name: tariffsName.STANDARD,
         price: 2600,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6'],
         bases: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
-        icon: 'fire'
+        icon: 'Fire'
       },
       {
         name: tariffsName.ADVANCED,
@@ -50,7 +50,7 @@ const products: Products[] = [
           'комфорте',
           'уюте'
         ],
-        icon: 'lightning'
+        icon: 'Lightning'
       }
     ]
   },
@@ -74,14 +74,14 @@ const products: Products[] = [
         price: 2400,
         options: ['Опция 1', 'Опция 2', 'Опция 3'],
         bases: ['ощущениях', 'ароматах', 'восприятии'],
-        icon: 'rocket'
+        icon: 'Rocket'
       },
       {
         name: tariffsName.STANDARD,
         price: 4800,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6'],
         bases: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
-        icon: 'fire'
+        icon: 'Fire'
       },
       {
         name: tariffsName.ADVANCED,
@@ -101,7 +101,7 @@ const products: Products[] = [
           'комфорте',
           'уюте'
         ],
-        icon: 'lightning'
+        icon: 'Lightning'
       }
     ]
   },
@@ -125,14 +125,14 @@ const products: Products[] = [
         price: 1400,
         options: ['Опция 1', 'Опция 2', 'Опция 3'],
         bases: ['ощущениях', 'ароматах', 'восприятии'],
-        icon: 'rocket'
+        icon: 'Rocket'
       },
       {
         name: tariffsName.STANDARD,
         price: 1800,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6'],
         bases: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
-        icon: 'fire'
+        icon: 'Fire'
       },
       {
         name: tariffsName.ADVANCED,
@@ -152,7 +152,7 @@ const products: Products[] = [
           'комфорте',
           'уюте'
         ],
-        icon: 'lightning'
+        icon: 'Lightning'
       }
     ]
   },
@@ -176,14 +176,14 @@ const products: Products[] = [
         price: 1750,
         options: ['Опция 1', 'Опция 2', 'Опция 3'],
         bases: ['ощущениях', 'ароматах', 'восприятии'],
-        icon: 'rocket'
+        icon: 'Rocket'
       },
       {
         name: tariffsName.STANDARD,
         price: 2200,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6'],
         bases: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
-        icon: 'fire'
+        icon: 'Fire'
       },
       {
         name: tariffsName.ADVANCED,
@@ -203,7 +203,7 @@ const products: Products[] = [
           'комфорте',
           'уюте'
         ],
-        icon: 'lightning'
+        icon: 'Lightning'
       }
     ]
   }
@@ -240,6 +240,7 @@ const breadcrumbs: Breadcrumbs[] = [
 
     <div class="details__content">
       <DetailsInfo :product class="details__info" />
+      <DetailsTariffs :tariffs="product?.tariffs" class="details__tariffs" />
     </div>
   </div>
 </template>

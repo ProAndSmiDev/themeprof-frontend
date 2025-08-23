@@ -43,4 +43,4 @@ defineProps<Props>()
   </div>
 </template>
 
-<style scoped src="./details-info.css"></style>
+<style scoped src="./styles/details-info.css"></style>
