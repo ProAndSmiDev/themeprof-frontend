@@ -237,6 +237,10 @@ const breadcrumbs: Breadcrumbs[] = [
         class="details__first-screen"
         :title="product.name"
     />
+
+    <div class="details__content">
+      <DetailsInfo :product class="details__info" />
+    </div>
   </div>
 </template>
 
