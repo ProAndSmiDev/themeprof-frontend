@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import type {Cart} from "interfaces/Cart";
-import {tariffsName} from "constants/tariffs";
-import CartResult from "components/cart/CartResult.vue";
+import CartResult from 'components/cart/CartResult.vue'
+import { tariffsName } from 'constants/tariffs'
+import type { Cart } from 'interfaces/Cart'
 
 const breadcrumbs = [
   {
     name: 'Корзина'
-  },
+  }
 ]
 const cartProducts: Cart[] = [
   {
@@ -17,13 +17,13 @@ const cartProducts: Cart[] = [
     },
     name: 'Готовый сайт на&nbsp;WordPress&nbsp;&mdash; Выкуп авто',
     description:
-        'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
+      'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
     tags: ['Адаптивный', 'Лендинг', 'Интернет-магазин'],
     tariff: {
-      icon: "Rocket",
-      name: "Быстрый старт"
+      icon: 'Rocket',
+      name: 'Быстрый старт'
     },
-    price: 1000,
+    price: 1000
   },
   {
     id: 300656,
@@ -33,13 +33,13 @@ const cartProducts: Cart[] = [
     },
     name: 'Шаблон сайта школы подготовительных курсов',
     description:
-        'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
+      'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
     tags: ['Адаптивный', 'Лендинг', 'Каталог'],
     tariff: {
-      icon: "Fire",
-      name: "Оптимальный"
+      icon: 'Fire',
+      name: 'Оптимальный'
     },
-    price: 2000,
+    price: 2000
   },
   {
     id: 187560,
@@ -49,13 +49,13 @@ const cartProducts: Cart[] = [
     },
     name: 'Шаблон доставки еды, пиццы с&nbsp;ингредиентами',
     description:
-        'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
+      'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
     tags: ['Адаптивный', 'Лендинг'],
     tariff: {
-      icon: "Lightning",
-      name: "Под ключ",
+      icon: 'Lightning',
+      name: 'Под ключ'
     },
-    price: 3000,
+    price: 3000
   },
   {
     id: 65321,
@@ -65,16 +65,15 @@ const cartProducts: Cart[] = [
     },
     name: 'Лендинг шаблон сайта сантехника - WordPress',
     description:
-        'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
+      'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
     tags: ['Адаптивный', 'Лендинг'],
     tariff: {
-      icon: "Fire",
-      name: "Оптимальный"
+      icon: 'Fire',
+      name: 'Оптимальный'
     },
-    price: 2000,
-  },
+    price: 2000
+  }
 ]
-
 </script>
 
 <template>

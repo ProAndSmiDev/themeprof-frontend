@@ -1,4 +1,4 @@
-import type {ProductsPhoto} from "interfaces/Products";
+import type { ProductsPhoto } from 'interfaces/Products'
 
 interface CartTariff {
   icon: string

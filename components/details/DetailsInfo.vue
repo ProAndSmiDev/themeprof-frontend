@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {Products} from "interfaces/Products";
+import type { Products } from 'interfaces/Products'
 
 interface Props {
   product: Products

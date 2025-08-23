@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {Cart} from "interfaces/Cart";
+import type { Cart } from 'interfaces/Cart'
 
 interface Props {
   products: Cart[]
@@ -12,7 +12,7 @@ const payments: string[] = ['Mir', 'Visa', 'Mastercard', 'Sbp']
 const fullPrice = computed(() => {
   let result = 0
 
-  for(let i = 0; i < props.products.length; i++) {
+  for (let i = 0; i < props.products.length; i++) {
     result += props.products[i].price
   }
 

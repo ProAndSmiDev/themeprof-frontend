@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {Cart} from "interfaces/Cart";
+import type { Cart } from 'interfaces/Cart'
 
 interface Props {
   products: Cart[]
@@ -17,7 +17,7 @@ const productsTextCounter = computed(() => {
     return 'продуктов'
   }
 
-  switch(lastDigit) {
+  switch (lastDigit) {
     case 1:
       return 'продукт'
     case 2:
