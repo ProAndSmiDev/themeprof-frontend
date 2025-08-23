@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type {Products} from "interfaces/Products";
-import {tariffsName} from "constants/tariffs";
+import { tariffsName } from 'constants/tariffs'
+import type { Products } from 'interfaces/Products'
 
 const products: Products[] = [
   {
@@ -11,7 +11,7 @@ const products: Products[] = [
     },
     name: 'Готовый сайт на&nbsp;WordPress&nbsp;&mdash; Выкуп авто',
     description:
-        'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
+      'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
     tags: ['Адаптивный', 'Лендинг', 'Интернет-магазин'],
     feedback: {
       rate: '4.1',
@@ -22,21 +22,21 @@ const products: Products[] = [
         name: tariffsName.DEFAULT,
         price: 1200,
         options: ['Опция 1', 'Опция 2', 'Опция 3'],
-        based: ['ощущениях', 'ароматах', 'восприятии'],
+        bases: ['ощущениях', 'ароматах', 'восприятии'],
         icon: 'rocket'
       },
       {
         name: tariffsName.STANDARD,
         price: 2600,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6'],
-        based: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
+        bases: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
         icon: 'fire'
       },
       {
         name: tariffsName.ADVANCED,
         price: 4500,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6', 'Опция 7', 'Опция 8', 'Опция 9'],
-        based: [
+        bases: [
           'ощущениях',
           'ароматах',
           'восприятии',
@@ -62,7 +62,7 @@ const products: Products[] = [
     },
     name: 'Шаблон сайта школы подготовительных курсов',
     description:
-        'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
+      'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
     tags: ['Адаптивный', 'Лендинг', 'Каталог'],
     feedback: {
       rate: '3.2',
@@ -73,21 +73,21 @@ const products: Products[] = [
         name: tariffsName.DEFAULT,
         price: 2400,
         options: ['Опция 1', 'Опция 2', 'Опция 3'],
-        based: ['ощущениях', 'ароматах', 'восприятии'],
+        bases: ['ощущениях', 'ароматах', 'восприятии'],
         icon: 'rocket'
       },
       {
         name: tariffsName.STANDARD,
         price: 4800,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6'],
-        based: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
+        bases: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
         icon: 'fire'
       },
       {
         name: tariffsName.ADVANCED,
         price: 7200,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6', 'Опция 7', 'Опция 8', 'Опция 9'],
-        based: [
+        bases: [
           'ощущениях',
           'ароматах',
           'восприятии',
@@ -113,7 +113,7 @@ const products: Products[] = [
     },
     name: 'Шаблон доставки еды, пиццы с&nbsp;ингредиентами',
     description:
-        'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
+      'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
     tags: ['Адаптивный', 'Лендинг'],
     feedback: {
       rate: '5.0',
@@ -124,21 +124,21 @@ const products: Products[] = [
         name: tariffsName.DEFAULT,
         price: 1400,
         options: ['Опция 1', 'Опция 2', 'Опция 3'],
-        based: ['ощущениях', 'ароматах', 'восприятии'],
+        bases: ['ощущениях', 'ароматах', 'восприятии'],
         icon: 'rocket'
       },
       {
         name: tariffsName.STANDARD,
         price: 1800,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6'],
-        based: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
+        bases: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
         icon: 'fire'
       },
       {
         name: tariffsName.ADVANCED,
         price: 2500,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6', 'Опция 7', 'Опция 8', 'Опция 9'],
-        based: [
+        bases: [
           'ощущениях',
           'ароматах',
           'восприятии',
@@ -164,7 +164,7 @@ const products: Products[] = [
     },
     name: 'Лендинг шаблон сайта сантехника - WordPress',
     description:
-        'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
+      'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
     tags: ['Адаптивный', 'Лендинг'],
     feedback: {
       rate: '2.7',
@@ -175,21 +175,21 @@ const products: Products[] = [
         name: tariffsName.DEFAULT,
         price: 1750,
         options: ['Опция 1', 'Опция 2', 'Опция 3'],
-        based: ['ощущениях', 'ароматах', 'восприятии'],
+        bases: ['ощущениях', 'ароматах', 'восприятии'],
         icon: 'rocket'
       },
       {
         name: tariffsName.STANDARD,
         price: 2200,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6'],
-        based: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
+        bases: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
         icon: 'fire'
       },
       {
         name: tariffsName.ADVANCED,
         price: 3450,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6', 'Опция 7', 'Опция 8', 'Опция 9'],
-        based: [
+        bases: [
           'ощущениях',
           'ароматах',
           'восприятии',
@@ -223,6 +223,7 @@ const products: Products[] = [
 
     <div class="products-catalog__wrapper">
       <ProductsCatalogList :products class="products-catalog__list" />
+      <ProductsCatalogFilter class="products-catalog__filter" />
     </div>
   </section>
 </template>
