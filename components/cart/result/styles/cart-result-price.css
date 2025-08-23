@@ -1,0 +1,16 @@
+.cart-result-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: var(--gutter);
+  padding-top: var(--gutter);
+  border-top: 1px solid hsl(var(--sep));
+  color: hsl(var(--primary));
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+
+  &__value {
+    color: hsl(var(--theme));
+  }
+}

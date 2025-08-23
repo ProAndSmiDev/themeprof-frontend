@@ -50,4 +50,4 @@ defineProps<Props>()
   </ul>
 </template>
 
-<style scoped src="./cart-products.css"></style>
+<style scoped src="./styles/cart-products.css"></style>

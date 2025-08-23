@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type {Cart} from "interfaces/Cart";
 import {tariffsName} from "constants/tariffs";
+import CartResult from "components/cart/CartResult.vue";
 
 const breadcrumbs = [
   {
@@ -73,6 +74,7 @@ const cartProducts: Cart[] = [
     price: 2000,
   },
 ]
+
 </script>
 
 <template>
@@ -82,6 +84,7 @@ const cartProducts: Cart[] = [
 
     <div class="cart__content">
       <CartProducts :products="cartProducts" class="cart__products" />
+      <CartResult :products="cartProducts" class="cart__result" />
     </div>
   </div>
 </template>
