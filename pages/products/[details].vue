@@ -212,16 +212,31 @@ const router = useRouter()
 const productId = computed(() => router.currentRoute.value.params.details)
 const product = computed(() => {
   for(let i = 0; i < products.length; i++) {
-    if(products[i]?.id === Number(productId.value)) {
+    if(products[i].id === Number(productId.value)) {
       return products[i]
     }
   }
 })
+const breadcrumbs: Breadcrumbs[] = [
+  {
+    "name":  "Шаблоны",
+    "url":   "/products",
+    "title": "Перейти на каталог продуктов"
+  },
+  {
+    "name": product.value.name
+  }
+]
 </script>
 
 <template>
   <div class="details">
-    <UiFirstScreen class="details__first-screen" :title="product?.name" />
+    <UiBreadcrumbs :breadcrumbs class="details__breadcrumbs" />
+    <UiFirstScreen
+        v-if="product?.name"
+        class="details__first-screen"
+        :title="product.name"
+    />
   </div>
 </template>
 

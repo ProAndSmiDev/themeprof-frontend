@@ -1,0 +1,48 @@
+.ui-breadcrumbs {
+  column-gap: calc(var(--gutter) * 3);
+  padding-right: calc(var(--gutter) * 7);
+  padding-left: calc(var(--gutter) * 7);
+
+  &__item {
+    display: flex;
+
+    &:not(:first-child) {
+      position: relative;
+    }
+
+    &:first-child {
+      .ui-breadcrumbs__link {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    left: calc(var(--gutter) * -1.5 - 4px);
+    width: 8px;
+    height: 8px;
+
+    content: "";
+    color: hsla(var(--secondary), 50%);
+    transform: translateY(-50%);
+  }
+
+  &__link {
+    color: hsl(var(--theme));
+    font-size: 13px;
+    line-height: 16px;
+    transition: color 300ms ease;
+
+    &:hover,
+    &--active {
+      color: hsl(var(--secondary));
+    }
+
+    &--active {
+      pointer-events: none;
+    }
+  }
+}
