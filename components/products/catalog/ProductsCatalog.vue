@@ -22,21 +22,21 @@ const products: Products[] = [
         name: tariffsName.DEFAULT,
         price: 1200,
         options: ['Опция 1', 'Опция 2', 'Опция 3'],
-        based: ['ощущениях', 'ароматах', 'восприятии'],
+        bases: ['ощущениях', 'ароматах', 'восприятии'],
         icon: 'rocket'
       },
       {
         name: tariffsName.STANDARD,
         price: 2600,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6'],
-        based: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
+        bases: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
         icon: 'fire'
       },
       {
         name: tariffsName.ADVANCED,
         price: 4500,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6', 'Опция 7', 'Опция 8', 'Опция 9'],
-        based: [
+        bases: [
           'ощущениях',
           'ароматах',
           'восприятии',
@@ -73,21 +73,21 @@ const products: Products[] = [
         name: tariffsName.DEFAULT,
         price: 2400,
         options: ['Опция 1', 'Опция 2', 'Опция 3'],
-        based: ['ощущениях', 'ароматах', 'восприятии'],
+        bases: ['ощущениях', 'ароматах', 'восприятии'],
         icon: 'rocket'
       },
       {
         name: tariffsName.STANDARD,
         price: 4800,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6'],
-        based: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
+        bases: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
         icon: 'fire'
       },
       {
         name: tariffsName.ADVANCED,
         price: 7200,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6', 'Опция 7', 'Опция 8', 'Опция 9'],
-        based: [
+        bases: [
           'ощущениях',
           'ароматах',
           'восприятии',
@@ -124,21 +124,21 @@ const products: Products[] = [
         name: tariffsName.DEFAULT,
         price: 1400,
         options: ['Опция 1', 'Опция 2', 'Опция 3'],
-        based: ['ощущениях', 'ароматах', 'восприятии'],
+        bases: ['ощущениях', 'ароматах', 'восприятии'],
         icon: 'rocket'
       },
       {
         name: tariffsName.STANDARD,
         price: 1800,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6'],
-        based: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
+        bases: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
         icon: 'fire'
       },
       {
         name: tariffsName.ADVANCED,
         price: 2500,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6', 'Опция 7', 'Опция 8', 'Опция 9'],
-        based: [
+        bases: [
           'ощущениях',
           'ароматах',
           'восприятии',
@@ -175,21 +175,21 @@ const products: Products[] = [
         name: tariffsName.DEFAULT,
         price: 1750,
         options: ['Опция 1', 'Опция 2', 'Опция 3'],
-        based: ['ощущениях', 'ароматах', 'восприятии'],
+        bases: ['ощущениях', 'ароматах', 'восприятии'],
         icon: 'rocket'
       },
       {
         name: tariffsName.STANDARD,
         price: 2200,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6'],
-        based: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
+        bases: ['ощущениях', 'ароматах', 'восприятии', 'отзывах', 'оценках', 'актуальности', 'качестве'],
         icon: 'fire'
       },
       {
         name: tariffsName.ADVANCED,
         price: 3450,
         options: ['Опция 1', 'Опция 2', 'Опция 3', 'Опция 4', 'Опция 5', 'Опция 6', 'Опция 7', 'Опция 8', 'Опция 9'],
-        based: [
+        bases: [
           'ощущениях',
           'ароматах',
           'восприятии',
@@ -211,33 +211,21 @@ const products: Products[] = [
 </script>
 
 <template>
-  <section class="home-releases">
-    <header class="home-releases__header">
-      <UiTitle>
-        <template #boldText>
-          Новинки
-        </template>
-        этого месяца
-      </UiTitle>
-      <p class="home-releases__description">
-        <strong>Свежие продукты этого месяца только для вас!</strong>
-        Покупайте новые продукты по выгодной цене и только у нас!
-      </p>
-    </header>
-
-    <HomeReleasesList :products />
-
-    <UiLink
-        href="/products"
-        title="Посмотреть все текущие новинки этого месяца"
-        class="home-releases__link"
-    >
-      <template #icon>
-        <IconArrowUpRight />
+  <section class="products-catalog">
+    <UiTitle>
+      <template #boldText>
+        Выберите
       </template>
-      Все новинки
-    </UiLink>
+      продукт
+    </UiTitle>
+
+    <ProductsCatalogSort />
+
+    <div class="products-catalog__wrapper">
+      <ProductsCatalogList :products class="products-catalog__list" />
+      <ProductsCatalogFilter class="products-catalog__filter" />
+    </div>
   </section>
 </template>
 
-<style scoped src="./styles/home-releases.css"></style>
+<style scoped src="./styles/products-catalog.css"></style>

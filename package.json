@@ -8,13 +8,13 @@
   },
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "ncu -u && nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "biome": "biome check",
     "biome:fix": "biome check --write",
-    "lint": "stylelint \"app/**/*.css\"",
+    "lint": "stylelint \"**/*.css\"",
     "lint:fix": "stylelint \"app/**/*.css\" --fix"
   },
   "dependencies": {

@@ -1,12 +1,6 @@
-interface ProductsTariffs {
-  name: Tariffs
-  price: number
-  options: string[]
-  based: string[]
-  icon: string
-}
+import type { Tariffs } from 'interfaces/Tariffs'
 
-interface ProductsFeedback {
+export interface ProductsFeedback {
   rate: string
   comments: number
 }
@@ -16,12 +10,12 @@ interface ProductsPhoto {
   alt: string
 }
 
-interface Products {
+export interface Products {
   id: number
   name: string
   description: string
   photo: ProductsPhoto
   tags: string[]
   feedback: ProductsFeedback
-  tariffs: ProductsTariffs[]
+  tariffs: Tariffs[]
 }

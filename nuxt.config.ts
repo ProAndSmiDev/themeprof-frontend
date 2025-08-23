@@ -9,7 +9,9 @@ export default async () => defineNuxtConfig({
   alias: {
     'pages': await resolvePath('./pages/'),
     'css': await resolvePath('./assets/css/'),
-    'components': await resolvePath('./components/')
+    'constants': await resolvePath('./constants/'),
+    'components': await resolvePath('./components/'),
+    'interfaces': await resolvePath('./interfaces/'),
   },
   postcss: {
     plugins: {

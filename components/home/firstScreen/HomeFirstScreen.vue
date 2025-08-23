@@ -25,4 +25,4 @@
   </UiFirstScreenPuzzle>
 </template>
 
-<style scoped src="./styles/home-first-screen.css"></style>
+<style scoped src="./home-first-screen.css"></style>

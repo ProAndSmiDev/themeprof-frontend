@@ -1,0 +1,52 @@
+.products-first-screen {
+  background-image: url("/img/first-screen/puzzle/decor-alt.webp");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 896px 620px;
+
+  &__title {
+    width: 100%;
+    max-width: 724px;
+
+    display: inline-block;
+
+    padding: calc(var(--gutter) * 8) calc(var(--gutter) * 7);
+    background-image: url("/img/first-screen/puzzle/title-bg-alt.webp");
+    background-size: 100% 100%;
+  }
+
+  &__description {
+    width: 100%;
+    max-width: 340px;
+    margin-top: calc(var(--gutter) * 7);
+    margin-bottom: var(--gutter);
+    margin-left: calc(var(--gutter) * 10);
+
+    display: flex;
+    align-items: flex-start;
+    column-gap: calc(var(--gutter) * 2);
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    color: hsl(var(--theme));
+    font-size: 30px;
+
+    @media(width <= 1439px) {
+      font-size: 20px;
+    }
+  }
+
+  &__text {
+    color: hsl(var(--secondary));
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+
+    @media(width <= 1439px) {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+}
+

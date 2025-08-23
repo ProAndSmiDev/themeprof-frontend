@@ -1,0 +1,22 @@
+.products-catalog {
+  display: flex;
+  flex-direction: column;
+  row-gap: calc(var(--gutter) * 2.5);
+
+  &__filter {
+    position: sticky;
+    top: var(--gutter);
+    width: 100%;
+    max-width: 383px;
+    height: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    column-gap: calc(var(--gutter) * 2.5);
+  }
+
+  &__list {
+    width: 100%;
+  }
+}

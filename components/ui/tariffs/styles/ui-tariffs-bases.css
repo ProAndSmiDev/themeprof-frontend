@@ -1,0 +1,54 @@
+.ui-tariffs-bases {
+  display: flex;
+  flex-direction: column;
+  padding: calc(var(--gutter) * 1.5) calc(var(--gutter) * 2.5);
+  border: 5px solid hsl(var(--light));
+  border-radius: calc(var(--border-radius) * 7.5);
+  row-gap: calc(var(--gutter) * 1.5);
+
+  &--default {
+    .ui-tariffs-bases {
+      &__caption {
+        font-size: 18px;
+        line-height: 27px;
+      }
+
+      &__item {
+        background-color: hsl(var(--light));
+        background-image: url("/img/products/tariffs/based-bg.jpg");
+      }
+    }
+  }
+
+  &--alternative {
+    .ui-tariffs-bases {
+      &__item {
+        background-color: hsl(var(--sep));
+        background-image: url("/img/products/tariffs/based-bg-alt.jpg");
+        font-size: 13px;
+        line-height: 17px;
+      }
+    }
+  }
+
+  &__caption {
+    color: hsl(var(--primary));
+    text-align: center;
+    font-weight: 500;
+  }
+
+  &__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gutter);
+  }
+
+  &__item {
+    padding: var(--gutter);
+    border-radius: calc(var(--border-radius) * 2.5);
+    background-size: cover;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+}

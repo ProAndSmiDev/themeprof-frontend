@@ -33,7 +33,11 @@
     },
     "linter": {
         "rules": {
-            "recommended": true
+            "recommended": true,
+            "correctness": {
+                "noUnusedVariables": "off",
+                "noUnusedImports": "off"
+            }
         }
     },
     "json": {
