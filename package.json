@@ -14,7 +14,7 @@
     "postinstall": "nuxt prepare",
     "biome": "biome check",
     "biome:fix": "biome check --write",
-    "lint": "stylelint \"app/**/*.css\"",
+    "lint": "stylelint \"**/*.css\"",
     "lint:fix": "stylelint \"app/**/*.css\" --fix"
   },
   "dependencies": {

@@ -1,18 +1,18 @@
 <script setup lang="ts">
 const sortData = [
   {
-    icon:     'Default',
-    caption:  'По умолчанию',
-    isActive: true,
+    icon: 'Default',
+    caption: 'По умолчанию',
+    isActive: true
   },
   {
-    icon:    'Expensive',
-    caption: 'Сначала дорогие',
+    icon: 'Expensive',
+    caption: 'Сначала дорогие'
   },
   {
-    icon:    'Cheap',
-    caption: 'Сначала дешевые',
-  },
+    icon: 'Cheap',
+    caption: 'Сначала дешевые'
+  }
 ]
 </script>
 

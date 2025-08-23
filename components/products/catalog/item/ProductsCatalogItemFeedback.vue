@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {ProductsFeedback} from "interfaces/Products";
+import type { ProductsFeedback } from 'interfaces/Products'
 
 interface Props {
   feedback: ProductsFeedback

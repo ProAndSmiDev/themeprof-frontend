@@ -1,4 +1,4 @@
-import type {Tariffs} from "interfaces/Tariffs";
+import type { Tariffs } from 'interfaces/Tariffs'
 
 export interface ProductsFeedback {
   rate: string

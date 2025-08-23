@@ -1,61 +1,61 @@
 {
-  "$schema" : "./node_modules/@biomejs/biome/configuration_schema.json",
-  "files" : {
-    "includes" : [
-      "pages/**/*.vue",
-      "layouts/**/*.vue",
-      "components/**/*.vue",
-      "interfaces/**/*.ts",
-      "middleware/**/*.ts"
-    ],
-    "ignoreUnknown" : true
-  },
-  "formatter" : {
-    "attributePosition" : "multiline",
-    "bracketSpacing" : true,
-    "indentStyle" : "space",
-    "lineWidth" : 120,
-    "indentWidth" : 2,
-    "lineEnding" : "lf"
-  },
-  "javascript" : {
-    "formatter" : {
-      "arrowParentheses" : "always",
-      "attributePosition" : "auto",
-      "bracketSameLine" : false,
-      "bracketSpacing" : true,
-      "enabled" : true,
-      "quoteProperties" : "asNeeded",
-      "quoteStyle" : "single",
-      "semicolons" : "asNeeded",
-      "trailingCommas" : "none"
-    }
-  },
-  "linter" : {
-    "rules" : {
-      "recommended" : true,
-      "correctness" : {
-        "noUnusedVariables" : "off",
-        "noUnusedImports" : "off"
-      }
-    }
-  },
-  "json" : {
-    "formatter" : {
-      "enabled" : true,
-      "indentWidth" : 4,
-      "lineWidth" : 80
+    "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+    "files": {
+        "includes": [
+            "pages/**/*.vue",
+            "layouts/**/*.vue",
+            "components/**/*.vue",
+            "interfaces/**/*.ts",
+            "middleware/**/*.ts"
+        ],
+        "ignoreUnknown": true
     },
-    "linter" : {
-      "enabled" : false
-    }
-  },
-  "css" : {
-    "formatter" : {
-      "enabled" : false
+    "formatter": {
+        "attributePosition": "multiline",
+        "bracketSpacing": true,
+        "indentStyle": "space",
+        "lineWidth": 120,
+        "indentWidth": 2,
+        "lineEnding": "lf"
     },
-    "linter" : {
-      "enabled" : false
+    "javascript": {
+        "formatter": {
+            "arrowParentheses": "always",
+            "attributePosition": "auto",
+            "bracketSameLine": false,
+            "bracketSpacing": true,
+            "enabled": true,
+            "quoteProperties": "asNeeded",
+            "quoteStyle": "single",
+            "semicolons": "asNeeded",
+            "trailingCommas": "none"
+        }
+    },
+    "linter": {
+        "rules": {
+            "recommended": true,
+            "correctness": {
+                "noUnusedVariables": "off",
+                "noUnusedImports": "off"
+            }
+        }
+    },
+    "json": {
+        "formatter": {
+            "enabled": true,
+            "indentWidth": 4,
+            "lineWidth": 80
+        },
+        "linter": {
+            "enabled": false
+        }
+    },
+    "css": {
+        "formatter": {
+            "enabled": false
+        },
+        "linter": {
+            "enabled": false
+        }
     }
-  }
 }
