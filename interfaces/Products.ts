@@ -5,7 +5,7 @@ export interface ProductsFeedback {
   comments: number
 }
 
-interface ProductsPhoto {
+export interface ProductsPhoto {
   url: string
   alt: string
 }

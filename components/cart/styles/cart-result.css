@@ -1,0 +1,34 @@
+.cart-result {
+  padding: calc(var(--gutter) * 2) calc(var(--gutter) * 3) calc(var(--gutter) * 3);
+  border-radius: calc(var(--border-radius) * 5);
+  background-color: hsl(var(--light));
+  background-image: url("/img/products/tariffs/bg.jpg");
+  background-size: 100% 100%;
+
+  &__caption {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+  }
+
+  &__agreement {
+    margin-top: var(--gutter);
+  }
+
+  &__price,
+  &__costs {
+    margin-top: calc(var(--gutter) * 1.5);
+  }
+
+  &__payments,
+  &__buy {
+    margin-top: calc(var(--gutter) * 2.5);
+  }
+
+  &__buy,
+  &__payments,
+  &__agreement {
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,112 @@
+.cart-products {
+  flex-direction: column;
+  row-gap: calc(var(--gutter) * 2);
+
+  &__item {
+    width: 100%;
+
+    display: flex;
+    column-gap: calc(var(--gutter) * 3);
+    padding: calc(var(--gutter) * 2) calc(var(--gutter) * 3);
+
+    border-radius: calc(var(--border-radius) * 5);
+    background-color: hsl(var(--light));
+    background-image: url("/img/products/tariffs/bg.jpg");
+  }
+
+  &__info {
+    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: calc(var(--gutter) * 0.5);
+  }
+
+
+  &__photo {
+    width: 160px;
+    height: 200px;
+  }
+
+  &__article {
+    display: flex;
+    align-items: center;
+    column-gap: calc(var(--gutter) * 0.5);
+    color: hsl(var(--secondary));
+    font-size: 13px;
+    line-height: 17px;
+  }
+
+  &__article-id {
+    color: hsl(var(--primary));
+  }
+
+  &__caption {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 28px;
+    letter-spacing: 1px;
+  }
+
+  &__description {
+    margin-top: calc(var(--gutter) * 0.5);
+    color: hsl(var(--primary));
+    font-size: 13px;
+    line-height: 17px;
+  }
+
+  &__tariff {
+    margin-top: calc(var(--gutter) * 0.5);
+
+    display: flex;
+    align-items: center;
+    column-gap: calc(var(--gutter) * 0.5);
+    color: hsl(var(--theme));
+  }
+
+  &__tariff-icon {
+    font-size: 18px;
+  }
+
+  &__tariff-name {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 17px;
+  }
+
+  &__extra {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
+  }
+
+  &__price {
+    position: relative;
+    right: calc(var(--gutter) * -3 + 3px);
+
+    padding: calc(var(--gutter) * 0.5) calc(var(--gutter) * 1.5);
+    outline: 3px solid hsl(var(--light));
+    border-top-left-radius: calc(var(--border-radius) * 2);
+    border-bottom-left-radius: calc(var(--border-radius) * 2);
+    background-color: hsl(var(--theme));
+    color: hsl(var(--light));
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+
+  &__remove {
+    width: 20px;
+    height: 20px;
+    color: hsl(var(--theme));
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: hsla(var(--theme), 80%);
+    }
+  }
+}
