@@ -39,7 +39,7 @@ defineProps<Props>()
 
         <div class="products-catalog-item__actions">
           <UiLink
-              href="/products/details"
+              :href="`/products/${product.id}`"
               :theme="themeType.LIGHT"
               title="Подробнее о продукте"
               :size="sizeType.S15"

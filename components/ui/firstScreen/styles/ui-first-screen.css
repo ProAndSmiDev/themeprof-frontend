@@ -1,0 +1,11 @@
+.ui-first-screen {
+  &__title {
+    width: 100%;
+
+    padding: calc(var(--gutter) * 5) calc(var(--gutter) * 7.5);
+    border-radius: calc(var(--border-radius) * 10);
+    background-color: hsl(var(--sep));
+    background-image: url("/img/first-screen/default/title-bg.jpg");
+    background-size: 100% 100%;
+  }
+}

@@ -1,10 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import UiFirstScreenTitle from "components/ui/firstScreen/UiFirstScreenTitle.vue";
+</script>
 
 <template>
   <section class="ui-first-screen-puzzle">
-    <h1 v-if="$slots.title" class="ui-first-screen-puzzle__title">
+    <UiFirstScreenTitle v-if="$slots.title">
       <slot name="title"></slot>
-    </h1>
+    </UiFirstScreenTitle>
 
     <slot></slot>
   </section>
