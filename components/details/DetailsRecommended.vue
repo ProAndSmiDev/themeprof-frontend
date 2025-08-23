@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {Products} from "interfaces/Products";
+import type { Products } from 'interfaces/Products'
 
 interface Props {
   products: Products[]
@@ -10,9 +10,9 @@ const props = defineProps<Props>()
 const recommendedProducts: Products[] = computed(() => {
   const result: Products[] = []
 
-  for(let i = 0; i < props.products.length; i++) {
-    for(let c = 0; c < props.recommended.length; c++) {
-      if(props.products[i].id === props.recommended[c]) {
+  for (let i = 0; i < props.products.length; i++) {
+    for (let c = 0; c < props.recommended.length; c++) {
+      if (props.products[i].id === props.recommended[c]) {
         result.push(props.products[i])
       }
     }

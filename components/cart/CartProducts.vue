@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {Cart} from "interfaces/Cart";
+import type { Cart } from 'interfaces/Cart'
 
 interface Props {
   products: Cart[]

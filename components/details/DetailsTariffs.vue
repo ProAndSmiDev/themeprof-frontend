@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {Tariffs} from "interfaces/Tariffs";
+import type { Tariffs } from 'interfaces/Tariffs'
 
 interface Props {
   tariffs: Tariffs[]

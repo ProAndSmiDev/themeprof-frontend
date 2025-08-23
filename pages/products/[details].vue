@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type {Products} from "interfaces/Products";
-import {tariffsName} from "constants/tariffs";
+import { tariffsName } from 'constants/tariffs'
+import type { Products } from 'interfaces/Products'
 
 const products: Products[] = [
   {
@@ -11,7 +11,7 @@ const products: Products[] = [
     },
     name: 'Готовый сайт на&nbsp;WordPress&nbsp;&mdash; Выкуп авто',
     description:
-        'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
+      'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
     tags: ['Адаптивный', 'Лендинг', 'Интернет-магазин'],
     feedback: {
       rate: '4.1',
@@ -63,7 +63,7 @@ const products: Products[] = [
     },
     name: 'Шаблон сайта школы подготовительных курсов',
     description:
-        'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
+      'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
     tags: ['Адаптивный', 'Лендинг', 'Каталог'],
     feedback: {
       rate: '3.2',
@@ -115,7 +115,7 @@ const products: Products[] = [
     },
     name: 'Шаблон доставки еды, пиццы с&nbsp;ингредиентами',
     description:
-        'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
+      'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
     tags: ['Адаптивный', 'Лендинг'],
     feedback: {
       rate: '5.0',
@@ -167,7 +167,7 @@ const products: Products[] = [
     },
     name: 'Лендинг шаблон сайта сантехника - WordPress',
     description:
-        'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
+      'Комплексное решение с&nbsp;разработкой UI/UX, реализация на&nbsp;Laravel. Более 60*2 экранов сервиса, интерактивный прототип, frontend, backend',
     tags: ['Адаптивный', 'Лендинг'],
     feedback: {
       rate: '2.7',
@@ -215,20 +215,20 @@ const products: Products[] = [
 const router = useRouter()
 const productId = computed(() => router.currentRoute.value.params.details)
 const product = computed(() => {
-  for(let i = 0; i < products.length; i++) {
-    if(products[i].id === Number(productId.value)) {
+  for (let i = 0; i < products.length; i++) {
+    if (products[i].id === Number(productId.value)) {
       return products[i]
     }
   }
 })
 const breadcrumbs: Breadcrumbs[] = [
   {
-    "name":  "Шаблоны",
-    "url":   "/products",
-    "title": "Перейти на каталог продуктов"
+    name: 'Шаблоны',
+    url: '/products',
+    title: 'Перейти на каталог продуктов'
   },
   {
-    "name": product.value.name
+    name: product.value.name
   }
 ]
 </script>

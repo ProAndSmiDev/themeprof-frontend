@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import UiFirstScreenTitle from "components/ui/firstScreen/UiFirstScreenTitle.vue";
+import UiFirstScreenTitle from 'components/ui/firstScreen/UiFirstScreenTitle.vue'
 </script>
 
 <template>
