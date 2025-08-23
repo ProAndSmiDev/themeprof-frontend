@@ -1,0 +1,8 @@
+.details-recommended {
+  display: flex;
+  flex-direction: column;
+  row-gap: calc(var(--gutter) * 4.5);
+
+  padding-right: calc(var(--gutter) * 7);
+  padding-left: calc(var(--gutter) * 7);
+}

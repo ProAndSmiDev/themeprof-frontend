@@ -1,0 +1,51 @@
+.details-tariffs {
+  flex-direction: column;
+  row-gap: calc(var(--gutter) * 3);
+
+  &__item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: calc(var(--gutter) * 1.5);
+
+    padding: calc(var(--gutter) * 3) calc(var(--gutter) * 2);
+    border-radius: calc(var(--border-radius) * 5);
+    background-color: hsl(var(--light));
+    background-image: url("/img/products/tariffs/bg.jpg");
+    background-size: 100% 100%;
+
+    &:first-child,
+    &:last-child {
+      display: none;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    column-gap: var(--gutter);
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    color: hsl(var(--theme));
+  }
+
+  &__caption {
+    color: hsl(var(--primary));
+  }
+
+  &__price {
+    margin-left: auto;
+    color: hsl(var(--theme));
+  }
+
+  &__caption,
+  &__price {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+}
