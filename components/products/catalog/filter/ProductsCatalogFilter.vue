@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const filter = [
+const filter: Filter[] = [
   {
     caption: 'Категории:',
     count: 4,

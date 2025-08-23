@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface Props {
-  filter: Object
+  filter: Filter
 }
 
 defineProps<Props>()
