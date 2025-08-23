@@ -52,7 +52,8 @@ const products: Products[] = [
         ],
         icon: 'Lightning'
       }
-    ]
+    ],
+    recommended: [65321, 300656, 187560, 300656]
   },
   {
     id: 300656,
@@ -103,7 +104,8 @@ const products: Products[] = [
         ],
         icon: 'Lightning'
       }
-    ]
+    ],
+    recommended: [321056, 65321, 187560, 321056]
   },
   {
     id: 187560,
@@ -154,7 +156,8 @@ const products: Products[] = [
         ],
         icon: 'Lightning'
       }
-    ]
+    ],
+    recommended: [321056, 300656, 65321, 321056]
   },
   {
     id: 65321,
@@ -205,7 +208,8 @@ const products: Products[] = [
         ],
         icon: 'Lightning'
       }
-    ]
+    ],
+    recommended: [321056, 300656, 187560, 300656]
   }
 ]
 const router = useRouter()
@@ -238,10 +242,12 @@ const breadcrumbs: Breadcrumbs[] = [
         :title="product.name"
     />
 
-    <div class="details__content">
+    <div v-if="product" class="details__content">
       <DetailsInfo :product class="details__info" />
-      <DetailsTariffs :tariffs="product?.tariffs" class="details__tariffs" />
+      <DetailsTariffs :tariffs="product.tariffs" class="details__tariffs" />
     </div>
+
+    <DetailsRecommended :products :recommended="product?.recommended" class="details__recommended" />
   </div>
 </template>
 
