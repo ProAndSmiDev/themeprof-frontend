@@ -18,16 +18,16 @@
     "lint:fix": "stylelint \"app/**/*.css\" --fix"
   },
   "dependencies": {
-    "nuxt": "^4.0.3",
-    "vue": "^3.5.19",
+    "nuxt": "^4.1.0",
+    "vue": "^3.5.21",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.2.2",
-    "@nuxt/kit": "^4.0.3",
+    "@biomejs/biome": "^2.2.3",
+    "@nuxt/kit": "^4.1.0",
     "@stylistic/stylelint-plugin": "^4.0.0",
     "autoprefixer": "^10.4.21",
-    "npm-check-updates": "^18.0.2",
+    "npm-check-updates": "^18.0.3",
     "nuxt-font-loader": "^2.3.5",
     "nuxt-svgo": "^4.2.6",
     "nuxt-swiper": "^2.0.1",
