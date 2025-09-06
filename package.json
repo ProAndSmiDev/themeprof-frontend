@@ -18,13 +18,13 @@
     "lint:fix": "stylelint \"app/**/*.css\" --fix"
   },
   "dependencies": {
-    "nuxt": "^4.1.0",
+    "nuxt": "^4.1.1",
     "vue": "^3.5.21",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.3",
-    "@nuxt/kit": "^4.1.0",
+    "@nuxt/kit": "^4.1.1",
     "@stylistic/stylelint-plugin": "^4.0.0",
     "autoprefixer": "^10.4.21",
     "npm-check-updates": "^18.0.3",
