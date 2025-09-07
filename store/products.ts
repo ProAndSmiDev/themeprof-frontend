@@ -3,7 +3,8 @@ import type { Products } from "interfaces/Products"
 
 export const useProductsStore = defineStore('products', {
   state: () => ({
-    products: [] as Products[],
+    products: [] as Object[],
+    product: {} as Object,
     loading: true,
     error: null as string | null,
   }),
@@ -30,8 +31,17 @@ export const useProductsStore = defineStore('products', {
       }
     },
 
-    getProductById(id: number): Products | undefined {
-      return this.products.find(product => product.id === id)
+    async getProductById(id: number) {
+      try {
+        const response = await fetch(`https://fakestoreapi.com/products/${id}`)
+        if (!response.ok) throw new Error('Ошибка сети')
+        const data: Object = await response.json()
+        this.product = data
+      } catch (err) {
+        this.error = 'Ошибка загрузки данных продукта'
+      } finally {
+        this.loading = false
+      }
     }
   }
 })

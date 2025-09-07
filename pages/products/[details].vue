@@ -18,11 +18,9 @@ const breadcrumbs = computed(() => [
 ])
 
 onMounted(async () => {
-  if (store.products.length === 0) {
-    await store.fetchProducts()
-  }
+  await store.getProductById(productIdByRoute)
 
-  product.value = store.getProductById(productIdByRoute)
+  product.value = store.product
 })
 </script>
 
