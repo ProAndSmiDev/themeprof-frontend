@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import type { Products } from 'interfaces/Products'
-
 interface Props {
-  product: Products
+  product: Object
 }
 
 defineProps<Props>()
@@ -23,7 +21,7 @@ defineProps<Props>()
       </li>
       <li class="details-info__tabs-item">
         <button class="details-info__tabs-clicker">
-          Отзывы ({{ product.feedback.comments }})
+          Отзывы ({{ product.rating.count }})
         </button>
       </li>
     </ul>
@@ -36,7 +34,7 @@ defineProps<Props>()
         </button>
       </p>
 
-      <img :src="product.photo.url" :alt="product.photo.alt" class="details-info__photo" />
+      <img :src="product.image" :alt="product.title" class="details-info__photo" />
 
       <p class="details-info__text" v-html="product.description"></p>
     </div>

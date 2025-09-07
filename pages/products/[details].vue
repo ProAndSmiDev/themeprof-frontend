@@ -33,10 +33,10 @@ onMounted(async () => {
         :title="product.title"
     />
 
-    <!--div v-if="product" class="details__content">
+    <div v-if="product" class="details__content">
       <DetailsInfo :product class="details__info" />
-      <DetailsTariffs :tariffs="product.tariffs" class="details__tariffs" />
-    </div-->
+      <!--DetailsTariffs :tariffs="product.tariffs" class="details__tariffs" /-->
+    </div>
 
     <!--DetailsRecommended :products :recommended="product?.recommended" class="details__recommended" /-->
   </div>

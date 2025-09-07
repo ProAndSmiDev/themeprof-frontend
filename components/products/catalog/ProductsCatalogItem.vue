@@ -8,24 +8,6 @@ interface Props {
 }
 
 const props = defineProps<Props>()
-
-// const productData = computed<Products>(() => ({
-//   id: props.product?.id,
-//   name: props.product?.title,
-//   description: props.product?.description,
-//   photo: {
-//     url: props.product?.image,
-//     alt: props.product?.title,
-//   },
-//   tags: [],
-//   feedback: {
-//     rate: props.product?.rate,
-//     comments: 0,
-//   },
-//   tariffs: [],
-// }))
-
-console.log(props.product)
 </script>
 
 <template>
