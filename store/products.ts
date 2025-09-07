@@ -28,6 +28,10 @@ export const useProductsStore = defineStore('products', {
       } finally {
         this.loading = false
       }
+    },
+
+    getProductById(id: number): Products | undefined {
+      return this.products.find(product => product.id === id)
     }
   }
 })
