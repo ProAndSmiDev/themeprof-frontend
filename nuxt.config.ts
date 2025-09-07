@@ -2,12 +2,13 @@
 import {resolvePath} from '@nuxt/kit'
 
 export default async () => defineNuxtConfig({
-  modules: ['nuxt-svgo', 'nuxt-swiper', 'nuxt-font-loader'],
+  modules: ['nuxt-svgo', 'nuxt-swiper', 'nuxt-font-loader', '@pinia/nuxt'],
   svgo: {
     componentPrefix: 'Icon',
   },
   alias: {
     'pages': await resolvePath('./pages/'),
+    'store': await resolvePath('./store/'),
     'css': await resolvePath('./assets/css/'),
     'constants': await resolvePath('./constants/'),
     'components': await resolvePath('./components/'),

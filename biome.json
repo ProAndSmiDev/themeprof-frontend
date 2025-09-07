@@ -2,7 +2,6 @@
     "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
     "files": {
         "includes": [
-            "pages/**/*.vue",
             "layouts/**/*.vue",
             "components/**/*.vue",
             "interfaces/**/*.ts",

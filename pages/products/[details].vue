@@ -228,7 +228,7 @@ const breadcrumbs: Breadcrumbs[] = [
     title: 'Перейти на каталог продуктов'
   },
   {
-    name: product.value.name
+    name: product.name
   }
 ]
 </script>
