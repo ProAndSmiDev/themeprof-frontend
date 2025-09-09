@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { sizeType } from 'constants/sizeType'
 import { themeType } from 'constants/themeType'
-import type { Products } from 'interfaces/Products'
 
 interface Props {
   product: Object
@@ -35,6 +34,10 @@ const props = defineProps<Props>()
 
     <footer class="products-catalog-item__footer">
       <ProductsCatalogItemTariffs v-if="product.tariffs" :tariffs="product.tariffs" />
+
+      <p class="products-catalog-item__price">
+        {{ product.price }}$
+      </p>
 
       <div class="products-catalog-item__actions">
         <UiLink
