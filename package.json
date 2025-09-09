@@ -29,7 +29,7 @@
     "@nuxt/kit": "^4.1.1",
     "@stylistic/stylelint-plugin": "^4.0.0",
     "autoprefixer": "^10.4.21",
-    "npm-check-updates": "^18.0.3",
+    "npm-check-updates": "^18.1.0",
     "nuxt-font-loader": "^2.3.5",
     "nuxt-svgo": "^4.2.6",
     "nuxt-swiper": "^2.0.1",
