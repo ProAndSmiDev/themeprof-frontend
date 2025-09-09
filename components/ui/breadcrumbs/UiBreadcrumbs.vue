@@ -20,7 +20,7 @@ defineProps<Props>()
   >
     <IconArrowRight class="ui-breadcrumbs__arrow" />
     <NuxtLink
-        :href="breadcrumbsItem?.url"
+        :to="breadcrumbsItem?.url"
         :title="breadcrumbsItem.title"
         v-html="breadcrumbsItem.name"
         class="ui-breadcrumbs__link"

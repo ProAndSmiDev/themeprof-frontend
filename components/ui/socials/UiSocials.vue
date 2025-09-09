@@ -8,9 +8,9 @@ defineProps<Props>()
 
 <template>
   <ul class="ui-socials">
-    <li v-for="(social, idx) in socials" :key="idx" class="ui-socials__item">
+    <li v-for="(social, idx) in socials" :key="idx">
       <a :href="social.url.path" :title="social.url.title" target="_blank" class="ui-socials__link">
-        <component filled :is="`IconSocials${social.icon}`" />
+        <component filled :fontControlled="false" :is="`IconSocials${social.icon}`" />
       </a>
     </li>
   </ul>

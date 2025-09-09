@@ -1,6 +1,12 @@
 <script setup lang="ts">
+import {useProductsStore} from "store/products";
+
+const emit = defineEmits(['filtersChanged'])
+
+const store = useProductsStore()
+
 const filter: Filter[] = [
-  {
+    /*{
     caption: 'Категории:',
     count: 4,
     options: [
@@ -54,34 +60,37 @@ const filter: Filter[] = [
         name: 'toys'
       }
     ]
-  },
+  },*/
   {
     caption: 'Количество отзывов:',
     options: [
       {
         caption: '10+',
-        value: '10+',
+        value: 'more_than_10',
         name: '10'
       },
       {
         caption: '50+',
-        value: '50+',
+        value: 'more_than_50',
         name: '50'
       },
       {
         caption: '100+',
-        value: '100+',
+        value: 'more_than_100',
         name: '100'
       },
       {
         caption: 'от 4',
-        value: '4 звезды и более',
-        name: '4-stars-and-more',
-        byRate: true
+        value: 'more_above_4',
+        name: '4-stars-and-more'
       }
     ]
   }
 ]
+
+function handleFiltersChanged(selectedFilters: string[]) {
+  emit('filtersChanged', selectedFilters)
+}
 </script>
 
 <template>
@@ -90,6 +99,7 @@ const filter: Filter[] = [
         v-for="(filterItem, idx) in filter"
         :key="idx"
         :filter="filterItem"
+        @filtersChanged="handleFiltersChanged"
         class="products-catalog-filter__item"
     />
   </ul>

@@ -6,6 +6,7 @@
   &__item {
     width: 100%;
 
+    display: flex;
 
     &--catalog {
       max-width: calc((100% - (var(--gutter) * 2.5 * 2)) / 3);

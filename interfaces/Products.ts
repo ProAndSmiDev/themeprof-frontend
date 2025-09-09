@@ -18,5 +18,5 @@ export interface Products {
   tags: string[]
   feedback: ProductsFeedback
   tariffs: Tariffs[]
-  recommended: number[]
+  recommended?: number[]
 }

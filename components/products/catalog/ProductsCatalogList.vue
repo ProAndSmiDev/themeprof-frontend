@@ -1,9 +1,6 @@
 <script setup lang="ts">
-import ProductsCatalogItem from 'components/products/catalog/ProductsCatalogItem.vue'
-import type { Products } from 'interfaces/Products'
-
 interface Props {
-  products: Products[]
+  products?: Object[]
   isRecommended?: boolean
 }
 
@@ -17,12 +14,18 @@ const productsCatalogListItemClasses = computed(() => ({
 
 <template>
   <ul class="products-catalog-list">
-    <ProductsCatalogItem
+    <li
         v-for="product in products"
         :key="product.id"
-        :product
         class="products-catalog-list__item"
-        :class="productsCatalogListItemClasses" />
+        :class="productsCatalogListItemClasses"
+    >
+      <ProductsCatalogItem
+          v-if="product"
+          :product="product"
+          class="products-catalog-list__card"
+      />
+    </li>
   </ul>
 </template>
 
