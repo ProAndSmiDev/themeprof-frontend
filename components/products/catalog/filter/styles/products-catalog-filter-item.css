@@ -1,5 +1,5 @@
 .products-catalog-filter-item {
-  &__card {
+  &__rating {
     width: 100%;
 
     display: flex;

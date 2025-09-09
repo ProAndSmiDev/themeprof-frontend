@@ -3,37 +3,35 @@ import {type SortType, sortType} from 'constants/sortType'
 import type { Catalog } from 'interfaces/Catalog'
 import { useProductsStore } from 'store/products'
 
-const productsStore = useProductsStore()
+const store = useProductsStore()
 const catalog = ref<Catalog>({})
-const sortedBy = ref<SortType>(sortType.DEFAULT)
-const filteredProducts = computed(() => {
-  let products = productsStore.products
+const activeFilters = ref<string[]>([])
+const products = computed(() => store.sortedAndFiltered)
 
-  if (sortedBy.value === sortType.EXPENSIVE) {
-    products = [...products].sort((a, b) => b.price - a.price)
-  } else if (sortedBy.value === sortType.CHEAP) {
-    products = [...products].sort((a, b) => a.price - b.price)
+watch([products, () => store.loading], ([newProducts, loading]) => {
+  catalog.value = {
+    products: newProducts,
+    loaded: !loading,
+    sortedBy: store.sortType,
+    filteredBy: [...activeFilters.value]
   }
-
-  return products
 })
 
 onMounted(async () => {
-  if (productsStore.loading || productsStore.products.length === 0) {
-    await productsStore.fetchProducts()
+  if (store.loading || store.products.length === 0) {
+    await store.fetchProducts()
   }
 
-  catalog.value = {
-    products: productsStore.products,
-    loaded: !productsStore.loading,
-    sortedBy: sortType.DEFAULT,
-    filteredBy: ['одежда', 'спорт']
-  }
+  store.applyFilters()
 })
 
 function updateSort(newSort: SortType) {
-  sortedBy.value = newSort
-  catalog.value.products = filteredProducts.value
+  store.setSortType(newSort)
+}
+
+function changeFilters(newFilters: string[]) {
+  activeFilters.value = newFilters
+  store.setReviewFilters(newFilters)
 }
 </script>
 
@@ -46,7 +44,7 @@ function updateSort(newSort: SortType) {
       продукт
     </UiTitle>
 
-    <ProductsCatalogSort :sortedBy @update:sortedBy="updateSort" />
+    <ProductsCatalogSort :sortedBy="store.sortType" @update:sortedBy="updateSort" />
 
     <div class="products-catalog__wrapper">
       <ProductsCatalogList
@@ -57,7 +55,7 @@ function updateSort(newSort: SortType) {
       <div v-else class="products-catalog__list">
         Загрузка продуктов...
       </div>
-      <ProductsCatalogFilter class="products-catalog__filter" />
+      <ProductsCatalogFilter @filtersChanged="changeFilters" class="products-catalog__filter" />
     </div>
   </section>
 </template>

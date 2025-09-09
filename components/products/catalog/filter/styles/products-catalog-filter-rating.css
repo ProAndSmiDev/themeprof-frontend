@@ -1,0 +1,118 @@
+.products-catalog-filter-rating {
+  display: flex;
+  flex-direction: column;
+  row-gap: calc(var(--gutter) * 2);
+
+  padding: calc(var(--gutter) * 4);
+  border: 5px solid hsl(var(--light));
+  border-radius: calc(var(--border-radius) * 7.5);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    column-gap: calc(var(--gutter) * 2);
+  }
+
+  &__title {
+    color: hsl(var(--primary));
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 31px;
+    white-space: nowrap;
+  }
+
+  &__counter {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1px;
+    border: 2px solid hsl(var(--theme));
+    border-radius: 50%;
+    background-color: hsl(var(--light));
+    color: hsl(var(--theme));
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 21px;
+  }
+
+  &__options {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: var(--gutter);
+  }
+
+  &__item {
+    width: 100%;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked {
+      ~ .products-catalog-filter-rating__area {
+        .products-catalog-filter-rating__checkbox {
+          background-color: hsl(var(--theme));
+        }
+      }
+    }
+  }
+
+  &__rating,
+  &__switch,
+  &__checkbox,
+  &__caption {
+    pointer-events: auto;
+  }
+
+  &__rating,
+  &__area {
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    column-gap: calc(var(--gutter) * 1.5);
+    color: hsl(var(--primary));
+    font-weight: 500;
+  }
+
+  &__area {
+    width: 100%;
+    pointer-events: none;
+  }
+
+  &__rating {
+    margin-right: auto;
+  }
+
+  &__checkbox {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: var(--border-radius);
+    background-color: hsl(var(--light));
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  &__caption {
+    display: flex;
+    align-items: center;
+    column-gap: 3px;
+  }
+
+  &__tick {
+    width: 16px;
+    height: 16px;
+    color: hsl(var(--light));
+  }
+
+  &__star {
+    color: hsl(var(--theme));
+  }
+}
