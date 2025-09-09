@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import type { Products } from 'interfaces/Products'
-
 interface Props {
-  product: Products
+  product: Object
 }
 
 defineProps<Props>()
@@ -11,13 +9,13 @@ defineProps<Props>()
 <template>
   <article class="home-releases-card">
     <header class="home-releases-card__header">
-      <img :src="product.photo.url" :alt="product.photo.alt" class="home-releases-card__photo">
-      <h3 class="home-releases-card__title" v-html="product.name"></h3>
+      <img :src="product.image" :alt="product.title" class="home-releases-card__photo">
+      <h3 class="home-releases-card__title" v-html="product.title"></h3>
     </header>
 
     <p class="home-releases-card__description" v-html="product.description"></p>
 
-    <UiTags :tags="product.tags" class="home-releases-card__tags" />
+    <UiTags v-if="product.tags" :tags="product.tags" class="home-releases-card__tags" />
   </article>
 </template>
 
