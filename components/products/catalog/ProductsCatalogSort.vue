@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {SortType} from "constants/sortType";
+import type { SortType } from 'constants/sortType'
 
 interface Props {
   sortedBy: SortType

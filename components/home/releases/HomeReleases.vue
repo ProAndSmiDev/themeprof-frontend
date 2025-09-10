@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {useProductsStore} from "store/products";
+import { useProductsStore } from 'store/products'
 
 const store = useProductsStore()
 const releaseProducts = computed(() => store.products.slice(-4))

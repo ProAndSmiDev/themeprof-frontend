@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useCartStore } from "store/cart"
+import { useCartStore } from 'store/cart'
 
 const cart = useCartStore()
 const cartItemCount = computed(() => cart.totalItems)

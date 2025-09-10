@@ -6,7 +6,7 @@ interface Props {
 const props = defineProps<Props>()
 
 const emit = defineEmits(['update:filter'])
-const selectedOptions = ref<string[]>(props.filter.options.filter(opt => opt.isChecked).map(opt => opt.value))
+const selectedOptions = ref<string[]>(props.filter.options.filter((opt) => opt.isChecked).map((opt) => opt.value))
 
 watch(selectedOptions, (newVal) => {
   emit('update:filter', newVal)

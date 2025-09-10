@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { sizeType } from 'constants/sizeType'
 import { themeType } from 'constants/themeType'
-import { useCartStore } from "store/cart"
+import { useCartStore } from 'store/cart'
 
 interface Props {
   product: Object
