@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { useCartStore } from "store/cart"
+
+const cart = useCartStore()
+const cartItemCount = computed(() => cart.totalItems)
+
 const menu: Menu[] = [
   {
     caption: 'Продукты',
@@ -37,7 +42,7 @@ const menu: Menu[] = [
         <span class="header__action-wrapper">
           <IconCartOrder class="header__cart" />
 
-          <span class="header__cart-count">0</span>
+          <span class="header__cart-count">{{ cartItemCount }}</span>
         </span>
       </NuxtLink>
     </div>
@@ -50,7 +55,7 @@ const menu: Menu[] = [
       <span class="header__action-wrapper">
         <IconCartOrder class="header__cart" />
 
-        <span class="header__cart-count">0</span>
+        <span class="header__cart-count">{{ cartItemCount }}</span>
       </span>
     </NuxtLink>
 

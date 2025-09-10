@@ -1,21 +1,15 @@
 <script setup lang="ts">
-import {type SortType, sortType} from 'constants/sortType'
-import type { Catalog } from 'interfaces/Catalog'
+import type {SortType} from 'constants/sortType'
 import { useProductsStore } from 'store/products'
 
 const store = useProductsStore()
-const catalog = ref<Catalog>({})
 const activeFilters = ref<string[]>([])
-const products = computed(() => store.sortedAndFiltered)
-
-watch([products, () => store.loading], ([newProducts, loading]) => {
-  catalog.value = {
-    products: newProducts,
-    loaded: !loading,
-    sortedBy: store.sortType,
-    filteredBy: [...activeFilters.value]
-  }
-})
+const catalog = computed(() => ({
+  products: store.sortedAndFiltered,
+  loaded: !store.loading,
+  sortedBy: store.sortType,
+  filteredBy: [...activeFilters.value]
+}))
 
 onMounted(async () => {
   if (store.loading || store.products.length === 0) {

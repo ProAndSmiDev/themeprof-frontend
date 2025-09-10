@@ -1,12 +1,19 @@
 <script setup lang="ts">
 import { sizeType } from 'constants/sizeType'
 import { themeType } from 'constants/themeType'
+import { useCartStore } from "store/cart"
 
 interface Props {
   product: Object
 }
 
 const props = defineProps<Props>()
+const cart = useCartStore()
+const product = props.product
+
+function addToCart() {
+  cart.addProduct(product, 1)
+}
 </script>
 
 <template>
@@ -49,7 +56,10 @@ const props = defineProps<Props>()
         >
           Подробнее
         </UiLink>
-        <UiButton title="Добавить шаблон в корзину">
+        <UiButton
+            @click="addToCart"
+            title="Добавить шаблон в корзину"
+        >
           Добавить в корзину
         </UiButton>
       </div>

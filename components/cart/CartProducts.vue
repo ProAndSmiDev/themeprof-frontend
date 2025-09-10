@@ -1,37 +1,43 @@
 <script setup lang="ts">
-import type { Cart } from 'interfaces/Cart'
+import {useCartStore} from "store/cart"
 
 interface Props {
-  products: Cart[]
+  products: Object[]
 }
 
 defineProps<Props>()
+
+const cart = useCartStore()
+
+function removeProductFromCart(productId: number) {
+  cart.removeProduct(productId)
+}
 </script>
 
 <template>
   <ul class="cart-products">
     <li
-        v-for="(product, idx) in products"
+        v-for="(productItem, idx) in products"
         :key="idx"
         class="cart-products__item"
     >
-      <img :src="product.photo.url" :alt="product.photo.alt" class="cart-products__photo">
+      <img :src="productItem.product.image" :alt="productItem.product.title" class="cart-products__photo">
 
       <div class="cart-products__info">
         <p class="cart-products__article">
-          Артикул: <strong class="cart-products__article-id">{{ product.id }}</strong>
+          Артикул: <strong class="cart-products__article-id">{{ productItem.product.id }}</strong>
         </p>
 
-        <p class="cart-products__caption" v-html="product.name"></p>
+        <p class="cart-products__caption" v-html="productItem.product.title"></p>
 
-        <UiTags :tags="product.tags" />
+        <UiTags v-if="productItem.tags" :tags="product.tags" />
 
-        <p class="cart-products__description" v-html="product.description"></p>
+        <p class="cart-products__description" v-html="productItem.product.description"></p>
 
-        <p class="cart-products__tariff">
-          <component :is="`IconTariffs${product.tariff.icon}`" class="cart-products__tariff-icon" />
+        <p v-if="productItem.tariff" class="cart-products__tariff">
+          <component :is="`IconTariffs${productItem.product.tariff.icon}`" class="cart-products__tariff-icon" />
           <span class="cart-products__tariff-name">
-            {{ product.tariff.name }}
+            {{ productItem.product.tariff.name }}
           </span>
         </p>
 
@@ -39,10 +45,10 @@ defineProps<Props>()
 
       <div class="cart-products__extra">
         <p class="cart-products__price">
-          {{ product.price }}&nbsp;₽
+          {{ productItem.product.price }}&nbsp;$
         </p>
 
-        <button type="button" class="cart-products__remove">
+        <button @click="removeProductFromCart(productItem.product.id)" type="button" class="cart-products__remove">
           <IconCartRemove />
         </button>
       </div>

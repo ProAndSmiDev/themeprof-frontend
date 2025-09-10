@@ -72,11 +72,11 @@ export const useProductsStore = defineStore('products', {
         this.filteredProducts = this.products.filter(product => {
           return this.reviewFilters.every(filter => {
             if (filter === 'more_than_10') {
-              return product.rating.count > 10
+              return product.rating.count >= 10
             } else if (filter === 'more_than_50') {
-              return product.rating.count > 50
+              return product.rating.count >= 50
             } else if (filter === 'more_than_100') {
-              return product.rating.count > 100
+              return product.rating.count >= 100
             } else if (filter === 'more_above_4') {
               return product.rating.rate >= 4
             }

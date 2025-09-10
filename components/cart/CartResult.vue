@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import type { Cart } from 'interfaces/Cart'
-
 interface Props {
-  products: Cart[]
+  products: Object[]
+  salePrice: number
 }
 
 const props = defineProps<Props>()
@@ -12,14 +11,13 @@ const payments: string[] = ['Mir', 'Visa', 'Mastercard', 'Sbp']
 const fullPrice = computed(() => {
   let result = 0
 
-  for (let i = 0; i < props.products.length; i++) {
-    result += props.products[i].price
+  for (const productItem of props.products) {
+    result += productItem.product.price
   }
 
-  return result
+  return Number(result.toFixed(2))
 })
-const salePrice = 1500
-const resultPrice = computed(() => fullPrice.value - salePrice)
+const resultPrice = computed(() => Number((fullPrice.value * (1 - props.salePrice / 100)).toFixed(2)))
 </script>
 
 <template>
@@ -29,9 +27,9 @@ const resultPrice = computed(() => fullPrice.value - salePrice)
     </p>
 
     <CartResultCosts
-        :products
+        :products="props.products"
         :fullPrice
-        :salePrice
+        :salePrice="props.salePrice"
         class="cart-result__costs"
     />
 
