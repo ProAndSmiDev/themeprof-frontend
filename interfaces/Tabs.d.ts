@@ -1,4 +1,4 @@
-import type {TabType} from "constants/tabType";
+import type { TabType } from 'constants/tabType'
 
 interface Tabs {
   name: string

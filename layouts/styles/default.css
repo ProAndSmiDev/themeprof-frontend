@@ -18,7 +18,6 @@
 
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     @media (width <= 1439px) {
       margin-top: calc(var(--gutter) * 3.5);

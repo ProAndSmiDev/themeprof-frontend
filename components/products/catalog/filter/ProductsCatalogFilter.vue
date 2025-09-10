@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import {useProductsStore} from "store/products";
+import { useProductsStore } from 'store/products'
 
 const emit = defineEmits(['filtersChanged'])
 
 const store = useProductsStore()
 
 const filter: Filter[] = [
-    /*{
+  /*{
     caption: 'Категории:',
     count: 4,
     options: [

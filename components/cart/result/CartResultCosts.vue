@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import type { Cart } from 'interfaces/Cart'
-
 interface Props {
-  products: Cart[]
+  products: Object[]
   fullPrice: number
   salePrice: number
 }
@@ -38,7 +36,7 @@ const productsTextCounter = computed(() => {
       </p>
 
       <p class="cart-result-costs__value">
-        {{ fullPrice }}&nbsp;₽
+        {{ fullPrice }}&nbsp;$
       </p>
     </li>
     <li class="cart-result-costs__item">
@@ -46,7 +44,7 @@ const productsTextCounter = computed(() => {
         Скидка:
       </p>
       <p class="cart-result-costs__value">
-        -{{ salePrice }}&nbsp;₽
+        {{ salePrice }}&nbsp;%
       </p>
     </li>
   </ul>

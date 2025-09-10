@@ -10,7 +10,7 @@ defineProps<Props>()
   <p class="cart-result-price">
     <span>Итого</span>
     <span class="cart-result-price__value">
-        {{ resultPrice }}&nbsp;₽
+        {{ resultPrice }}&nbsp;$
       </span>
   </p>
 </template>

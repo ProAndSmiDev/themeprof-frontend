@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import {useProductsStore} from "store/products";
+import { useProductsStore } from 'store/products'
 
 const store = useProductsStore()
 const releaseProducts = computed(() => store.products.slice(-4))
-
-console.log(releaseProducts.value)
 
 onMounted(async () => {
   if (store.loading || store.products.length === 0) {
