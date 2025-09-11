@@ -1,75 +1,47 @@
-# Nuxt Minimal Starter
+# Проект «Защита проекта Otus»
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+### Установка и запуск проекта:
+```c# 
+# Запуск установки зависимостей
+pnpm i
 
-## Setup
-
-Make sure to install dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
+# Запуск локальной сборки проекта с проверкой актуальных версий зависимостей
 pnpm dev
 
-# yarn
-yarn dev
+# Запуск проверки ошибок CSS
+pnpm lint
 
-# bun
-bun run dev
+# Запуск устранения ошибок CSS
+pnpm lint:fix
+
+# Запуск проверки ошибок JS
+pnpm biome
+
+# Запуск устранения ошибок JS
+pnpm biome:fix
 ```
+--- 
 
-## Production
+### Используемые технологии:
+- HTML (база)
+- CSS (база)
+- TypeScript (необходима типизация кода для дальнейшей поддержки проекта)
+- PostCSS (решил вопрос с необходимостью использования препроцессора)
+- Vue 3 (аткуальная версия на compositionAPI)
+- Nuxt (для простоты разработки на Vue)
+- Pinia (пока временное решение для хранения данных, возможно полностью уйду в localStorage и useAsyncData)
 
-Build the application for production:
+---
 
-```bash
-# npm
-npm run build
+### Планируемые технологии:
+- PHP (основа бэкэнда для сайтов и интернет-магазинов)
+- Laravel (для простоты разработки на PHP)
+- Docker (для разворачивания окружения с бэкэндом)
+- BootstrapCSS/TailwindCSS (для быстрой стилизации админки готовыми компонентами фреймворка)
+- PostgreSQL (для хранения данных на бэке и их отображения в API)
 
-# pnpm
-pnpm build
+---
 
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+### Дополнительные ссылки:
+- [ссылка на речь к презентации](https://disk.yandex.ru/i/aEp77TCNj_aJbQ)
+- [ссылка на презентацию проекта](https://disk.yandex.ru/i/oHNp099f0iWbCQ)
